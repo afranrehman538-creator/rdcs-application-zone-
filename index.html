@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R.D.C.S APPLICATION ZONE</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#ff1a1a;--dark:#020202;--panel:#0a0a0a}
+*{box-sizing:border-box;font-family:'Orbitron',sans-serif}
+body{
+margin:0;min-height:100vh;
+background:linear-gradient(135deg,#140000,#000,#140000);
+color:#fff;display:flex;justify-content:center;align-items:flex-start;
+padding:40px 10px;
+}
+.container{
+width:100%;max-width:1000px;
+background:rgba(0,0,0,.9);
+border:1px solid var(--red);
+box-shadow:0 0 40px rgba(255,0,0,.6), inset 0 0 20px rgba(255,0,0,.2);
+padding:35px;border-radius:22px;
+position:relative;overflow:hidden;
+}
+.container::before{
+content:"";position:absolute;inset:0;
+background:linear-gradient(120deg,transparent,rgba(255,0,0,.08),transparent);
+animation:sweep 6s linear infinite;
+}
+@keyframes sweep{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+.logo{
+text-align:center;font-size:36px;font-weight:800;letter-spacing:3px;
+color:var(--red);
+text-shadow:0 0 15px var(--red),0 0 35px var(--red);
+animation:glow 2.5s infinite alternate;
+margin-bottom:10px;
+}
+.subtitle{text-align:center;color:#ff7a7a;font-size:14px;margin-bottom:30px}
+@keyframes glow{from{text-shadow:0 0 10px var(--red)}to{text-shadow:0 0 35px var(--red),0 0 60px var(--red)}}
+form{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;position:relative;z-index:1;
+}
+form h3{grid-column:1/-1;text-align:center;color:#ff9b9b;margin:10px 0 5px;font-weight:600}
+.field{
+display:flex;flex-direction:column;gap:6px
+}
+label{font-size:12px;color:#ff9b9b}
+input,textarea{
+background:var(--panel);
+border:1px solid var(--red);
+padding:13px 14px;border-radius:12px;
+color:#fff;font-size:14px;
+box-shadow:inset 0 0 10px rgba(255,0,0,.15);
+}
+input::placeholder,textarea::placeholder{color:#ffb3b3}
+input:focus,textarea:focus{outline:none;box-shadow:0 0 15px var(--red)}
+.full{grid-column:1/-1}
+.upload{
+border:1px dashed var(--red);
+padding:18px;border-radius:14px;
+text-align:center;color:#ffb3b3;
+}
+.upload input{border:none;box-shadow:none;padding:0}
+button{
+grid-column:1/-1;margin-top:10px;
+background:linear-gradient(90deg,#600000,#ff1a1a,#600000);
+border:none;padding:16px;border-radius:30px;
+color:#fff;font-size:17px;letter-spacing:1px;cursor:pointer;
+box-shadow:0 0 25px rgba(255,0,0,.8);
+}
+button:hover{filter:brightness(1.25)}
+.footer{
+margin-top:25px;text-align:center;
+border-top:1px solid rgba(255,0,0,.4);
+padding-top:12px;font-size:13px;color:#ffb3b3
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="logo">R.D.C.S APPLICATION ZONE</div>
+<div class="subtitle">Secure Digital Application Portal</div><form action="https://formspree.io/f/xqkrzvpe" method="POST" enctype="multipart/form-data">
+<h3>Application Form</h3><div class="field">
+<label>Applicant Name</label>
+<input type="text" name="Applicant Name" placeholder="Enter full name" required>
+</div>
+<div class="field">
+<label>Father Name</label>
+<input type="text" name="Father Name" placeholder="Enter father name" required>
+</div>
+<div class="field">
+<label>Mother Name</label>
+<input type="text" name="Mother Name" placeholder="Enter mother name" required>
+</div>
+<div class="field">
+<label>Applicant Email</label>
+<input type="email" name="Applicant Email" placeholder="example@email.com" required>
+</div><div class="upload">
+<label>Upload Photo</label>
+<input type="file" name="Photo" accept="image/*" required>
+</div>
+<div class="upload">
+<label>Upload Video</label>
+<input type="file" name="Video" accept="video/*">
+</div><div class="full">
+<label>Additional Information</label>
+<textarea name="Additional Info" rows="4" placeholder="Write details if needed"></textarea>
+</div><button type="submit">SUBMIT APPLICATION</button>
+
+</form><div class="footer">Email Notification Active • rdcssourov@gmail.com</div>
+</div>
+</body>
+</html>
